@@ -21,10 +21,8 @@
         <!-- Tachyons CSS minified -->
         <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
         
-        <div class="container ph3 ph5-ns">
-            {% block content %}{% endblock %}
-          </div>
-
+        
+          
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/mysite.css' %}">
 
@@ -35,6 +33,10 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
+
+        <div class="container ph3 ph5-ns">
+            {% block content %}{% endblock %}
+          </div>
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/mysite.js' %}"></script>
